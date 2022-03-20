@@ -13,7 +13,7 @@ def get_hello():
 # TODO: query paramsを追加
 @app.get('/stock-price/{id}')
 def get_stock_price(id):
-  results = api.get_historical('MSFT', "DAY", 7, "DAY", 1)
+  results = api.get_historical(id, "DAY", 7, "DAY", 1)
   return results
 
 if __name__ == '__main__':
